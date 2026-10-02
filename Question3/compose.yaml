@@ -1,0 +1,11 @@
+services:
+
+  web:
+    image: python-app:V-0.1 
+    ports:
+      - "8080:3000"
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: ${{POSTGRES_PASSWORD}}
